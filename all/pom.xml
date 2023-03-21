@@ -64,7 +64,7 @@
         <bolt.version>1.5.10</bolt.version>
         <tracer.version>3.0.8</tracer.version>
         <lookout.version>1.4.1</lookout.version>
-        <bytebuddy.version>1.9.8</bytebuddy.version>
+        <bytebuddy.version>1.14.0</bytebuddy.version>
         <sofa.registry.version>5.2.0</sofa.registry.version>
         <bolt.swagger.version>1.5.18</bolt.swagger.version>
         <httpclient.version>4.5.13</httpclient.version>
@@ -525,15 +525,12 @@
                             </artifactSet>
                             <transformers>
                                 <!-- META-INF/services -->
-                                <transformer
-                                        implementation="org.apache.maven.plugins.shade.resource.ServicesResourceTransformer"/>
+                                <transformer implementation="org.apache.maven.plugins.shade.resource.ServicesResourceTransformer"/>
                                 <!-- spring相关 -->
-                                <transformer
-                                        implementation="org.apache.maven.plugins.shade.resource.AppendingTransformer">
+                                <transformer implementation="org.apache.maven.plugins.shade.resource.AppendingTransformer">
                                     <resource>META-INF/spring.handlers</resource>
                                 </transformer>
-                                <transformer
-                                        implementation="org.apache.maven.plugins.shade.resource.AppendingTransformer">
+                                <transformer implementation="org.apache.maven.plugins.shade.resource.AppendingTransformer">
                                     <resource>META-INF/spring.schemas</resource>
                                 </transformer>
                             </transformers>
