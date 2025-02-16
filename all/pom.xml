@@ -60,7 +60,7 @@
         <javassist.version>3.20.0-GA</javassist.version>
         <netty.version>4.1.44.Final</netty.version>
         <hessian.version>3.3.13</hessian.version>
-        <resteasy.version>3.6.3.Final</resteasy.version>
+        <resteasy.version>3.11.1.Final</resteasy.version>
         <bolt.version>1.5.10</bolt.version>
         <tracer.version>3.0.8</tracer.version>
         <lookout.version>1.4.1</lookout.version>
@@ -525,15 +525,12 @@
                             </artifactSet>
                             <transformers>
                                 <!-- META-INF/services -->
-                                <transformer
-                                        implementation="org.apache.maven.plugins.shade.resource.ServicesResourceTransformer"/>
+                                <transformer implementation="org.apache.maven.plugins.shade.resource.ServicesResourceTransformer"/>
                                 <!-- spring相关 -->
-                                <transformer
-                                        implementation="org.apache.maven.plugins.shade.resource.AppendingTransformer">
+                                <transformer implementation="org.apache.maven.plugins.shade.resource.AppendingTransformer">
                                     <resource>META-INF/spring.handlers</resource>
                                 </transformer>
-                                <transformer
-                                        implementation="org.apache.maven.plugins.shade.resource.AppendingTransformer">
+                                <transformer implementation="org.apache.maven.plugins.shade.resource.AppendingTransformer">
                                     <resource>META-INF/spring.schemas</resource>
                                 </transformer>
                             </transformers>
